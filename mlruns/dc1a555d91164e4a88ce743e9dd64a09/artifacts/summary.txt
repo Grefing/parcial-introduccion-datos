@@ -1,0 +1,39 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              price_rub   R-squared:                       0.955
+Model:                            OLS   Adj. R-squared:                  0.955
+Method:                 Least Squares   F-statistic:                     9325.
+Date:                Sat, 17 Oct 2026   Prob (F-statistic):               0.00
+Time:                        21:03:16   Log-Likelihood:                 3962.6
+No. Observations:                5730   AIC:                            -7897.
+Df Residuals:                    5716   BIC:                            -7804.
+Df Model:                          13                                         
+Covariance Type:            nonrobust                                         
+===================================================================================================
+                                      coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+const                              12.3786      3.311      3.739      0.000       5.888      18.869
+total_area                          0.0186      0.000     80.842      0.000       0.018       0.019
+rooms                              -0.0282      0.004     -6.869      0.000      -0.036      -0.020
+floor                               0.0005      0.000      2.405      0.016    9.69e-05       0.001
+total_floors                       -0.0014      0.000     -3.938      0.000      -0.002      -0.001
+completion_year                     0.0013      0.002      0.818      0.414      -0.002       0.005
+metro_distance_min                 -0.0006   2.32e-05    -25.304      0.000      -0.001      -0.001
+to_center_km                       -0.0049      0.000    -14.800      0.000      -0.006      -0.004
+district_price_per_sqm           2.193e-06   1.68e-08    130.639      0.000    2.16e-06    2.23e-06
+mortgage_rate_at_listing            0.0026      0.000      7.766      0.000       0.002       0.003
+complex_class_comfort              -0.3451      0.004    -79.686      0.000      -0.354      -0.337
+complex_class_economy              -0.5049      0.004   -112.600      0.000      -0.514      -0.496
+complex_class_premium               0.3358      0.009     38.753      0.000       0.319       0.353
+ready_status_under_construction    -0.0059      0.006     -1.034      0.301      -0.017       0.005
+==============================================================================
+Omnibus:                       14.421   Durbin-Watson:                   2.050
+Prob(Omnibus):                  0.001   Jarque-Bera (JB):               17.816
+Skew:                          -0.021   Prob(JB):                     0.000135
+Kurtosis:                       3.270   Cond. No.                     7.33e+08
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 7.33e+08. This might indicate that there are
+strong multicollinearity or other numerical problems.

@@ -1,0 +1,43 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          log_price_rub   R-squared:                       0.960
+Model:                            OLS   Adj. R-squared:                  0.960
+Method:                 Least Squares   F-statistic:                     8046.
+Date:                Sun, 18 Oct 2026   Prob (F-statistic):               0.00
+Time:                        20:09:17   Log-Likelihood:                 4295.6
+No. Observations:                5730   AIC:                            -8555.
+Df Residuals:                    5712   BIC:                            -8435.
+Df Model:                          17                                         
+Covariance Type:            nonrobust                                         
+===================================================================================================
+                                      coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+const                              15.0404      0.015   1028.652      0.000      15.012      15.069
+total_area                          0.0171   9.73e-05    176.113      0.000       0.017       0.017
+metro_distance_min                 -0.0005   2.26e-05    -21.413      0.000      -0.001      -0.000
+to_center_km                       -0.0031      0.000     -7.542      0.000      -0.004      -0.002
+district_price_per_sqm           2.164e-06   1.99e-08    108.808      0.000    2.12e-06     2.2e-06
+mortgage_rate_at_listing            0.0027      0.000      8.467      0.000       0.002       0.003
+complex_class_comfort              -0.3409      0.004    -83.156      0.000      -0.349      -0.333
+complex_class_economy              -0.5002      0.004   -115.832      0.000      -0.509      -0.492
+complex_class_premium               0.3431      0.008     41.545      0.000       0.327       0.359
+ready_status_under_construction    -0.0048      0.005     -0.953      0.340      -0.015       0.005
+okrug_NAO                          -0.0729      0.007    -10.087      0.000      -0.087      -0.059
+okrug_SAO                           0.0371      0.006      6.088      0.000       0.025       0.049
+okrug_SZAO                          0.0711      0.007     10.830      0.000       0.058       0.084
+okrug_TAO                          -0.1508      0.013    -11.883      0.000      -0.176      -0.126
+okrug_VAO                           0.0139      0.006      2.425      0.015       0.003       0.025
+okrug_YuAO                          0.0163      0.007      2.482      0.013       0.003       0.029
+okrug_YuZAO                         0.0661      0.006     10.704      0.000       0.054       0.078
+okrug_ZAO                           0.0828      0.007     11.626      0.000       0.069       0.097
+==============================================================================
+Omnibus:                       46.836   Durbin-Watson:                   2.019
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               62.808
+Skew:                           0.114   Prob(JB):                     2.30e-14
+Kurtosis:                       3.460   Cond. No.                     3.74e+06
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.74e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.

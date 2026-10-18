@@ -1,0 +1,50 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              price_rub   R-squared:                       0.960
+Model:                            OLS   Adj. R-squared:                  0.960
+Method:                 Least Squares   F-statistic:                     7216.
+Date:                Sat, 17 Oct 2026   Prob (F-statistic):               0.00
+Time:                        19:01:56   Log-Likelihood:                 5403.1
+No. Observations:                7163   AIC:                        -1.076e+04
+Df Residuals:                    7138   BIC:                        -1.058e+04
+Df Model:                          24                                         
+Covariance Type:            nonrobust                                         
+===================================================================================================
+                                      coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+const                              10.3784      2.852      3.639      0.000       4.787      15.969
+total_area                          0.0171   8.66e-05    198.090      0.000       0.017       0.017
+completion_year                     0.0023      0.001      1.636      0.102      -0.000       0.005
+metro_distance_min                 -0.0005   2.02e-05    -23.144      0.000      -0.001      -0.000
+to_center_km                       -0.0031      0.000     -7.552      0.000      -0.004      -0.002
+district_price_per_sqm           2.159e-06   3.03e-08     71.175      0.000     2.1e-06    2.22e-06
+subsidized_mortgage                -0.0009      0.004     -0.202      0.840      -0.010       0.008
+mortgage_rate_at_listing            0.0027      0.000      6.837      0.000       0.002       0.003
+complex_class_comfort              -0.3405      0.004    -91.978      0.000      -0.348      -0.333
+complex_class_economy              -0.4991      0.004   -129.761      0.000      -0.507      -0.492
+complex_class_premium               0.3441      0.007     46.665      0.000       0.330       0.359
+ready_status_under_construction    -0.0090      0.005     -1.735      0.083      -0.019       0.001
+deal_type_FZ214                     0.0038      0.003      1.094      0.274      -0.003       0.011
+deal_type_installment              -0.0073      0.005     -1.546      0.122      -0.017       0.002
+deal_type_trade-in                 -0.0009      0.004     -0.234      0.815      -0.009       0.007
+okrug_NAO                          -0.0808      0.013     -6.194      0.000      -0.106      -0.055
+okrug_SAO                           0.0322      0.011      2.965      0.003       0.011       0.053
+okrug_SVAO                         -0.0016      0.012     -0.135      0.893      -0.024       0.021
+okrug_SZAO                          0.0685      0.010      7.016      0.000       0.049       0.088
+okrug_TAO                          -0.1654      0.017     -9.775      0.000      -0.199      -0.132
+okrug_VAO                           0.0077      0.011      0.670      0.503      -0.015       0.030
+okrug_YuAO                          0.0083      0.012      0.710      0.477      -0.015       0.031
+okrug_YuZAO                         0.0655      0.009      7.008      0.000       0.047       0.084
+okrug_ZAO                           0.0787      0.010      8.165      0.000       0.060       0.098
+okrug_ZelAO                        -0.0218      0.017     -1.306      0.192      -0.055       0.011
+==============================================================================
+Omnibus:                       61.306   Durbin-Watson:                   1.973
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               89.300
+Skew:                           0.088   Prob(JB):                     4.06e-20
+Kurtosis:                       3.518   Cond. No.                     7.52e+08
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 7.52e+08. This might indicate that there are
+strong multicollinearity or other numerical problems.

@@ -1,0 +1,47 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              price_rub   R-squared:                       0.960
+Model:                            OLS   Adj. R-squared:                  0.960
+Method:                 Least Squares   F-statistic:                     6594.
+Date:                Sat, 17 Oct 2026   Prob (F-statistic):               0.00
+Time:                        21:01:43   Log-Likelihood:                 4331.4
+No. Observations:                5730   AIC:                            -8619.
+Df Residuals:                    5708   BIC:                            -8472.
+Df Model:                          21                                         
+Covariance Type:            nonrobust                                         
+===================================================================================================
+                                      coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+const                               9.1378      3.151      2.900      0.004       2.960      15.316
+total_area                          0.0186      0.000     86.414      0.000       0.018       0.019
+rooms                              -0.0299      0.004     -7.734      0.000      -0.037      -0.022
+floor                               0.0005      0.000      2.230      0.026    5.54e-05       0.001
+total_floors                        0.0003      0.000      0.999      0.318      -0.000       0.001
+completion_year                     0.0029      0.002      1.859      0.063      -0.000       0.006
+metro_distance_min                 -0.0005   2.25e-05    -21.532      0.000      -0.001      -0.000
+to_center_km                       -0.0030      0.000     -7.304      0.000      -0.004      -0.002
+district_price_per_sqm           2.166e-06   1.98e-08    109.346      0.000    2.13e-06    2.21e-06
+mortgage_rate_at_listing            0.0026      0.000      8.100      0.000       0.002       0.003
+complex_class_comfort              -0.3423      0.004    -82.730      0.000      -0.350      -0.334
+complex_class_economy              -0.5012      0.004   -116.117      0.000      -0.510      -0.493
+complex_class_premium               0.3419      0.008     41.506      0.000       0.326       0.358
+ready_status_under_construction    -0.0088      0.005     -1.630      0.103      -0.019       0.002
+okrug_NAO                          -0.0739      0.007    -10.252      0.000      -0.088      -0.060
+okrug_SAO                           0.0366      0.006      6.020      0.000       0.025       0.049
+okrug_SZAO                          0.0726      0.007     11.072      0.000       0.060       0.085
+okrug_TAO                          -0.1553      0.013    -12.266      0.000      -0.180      -0.130
+okrug_VAO                           0.0143      0.006      2.512      0.012       0.003       0.025
+okrug_YuAO                          0.0136      0.007      2.063      0.039       0.001       0.026
+okrug_YuZAO                         0.0674      0.006     10.962      0.000       0.055       0.079
+okrug_ZAO                           0.0835      0.007     11.729      0.000       0.070       0.097
+==============================================================================
+Omnibus:                       48.904   Durbin-Watson:                   2.020
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               61.038
+Skew:                           0.144   Prob(JB):                     5.57e-14
+Kurtosis:                       3.415   Cond. No.                     7.43e+08
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 7.43e+08. This might indicate that there are
+strong multicollinearity or other numerical problems.
