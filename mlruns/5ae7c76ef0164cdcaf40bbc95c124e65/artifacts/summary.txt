@@ -1,0 +1,26 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          log_price_rub   R-squared:                       0.866
+Model:                            OLS   Adj. R-squared:                  0.866
+Method:                 Least Squares   F-statistic:                 1.264e+05
+Date:                Wed, 21 Oct 2026   Prob (F-statistic):               0.00
+Time:                        01:40:56   Log-Likelihood:                 2775.8
+No. Observations:               39242   AIC:                            -5546.
+Df Residuals:                   39239   BIC:                            -5520.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================================
+                                 coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------------
+const                         -2.9993      0.038    -78.404      0.000      -3.074      -2.924
+log_total_area                 1.0006      0.004    224.979      0.000       0.992       1.009
+log_district_price_per_sqm     1.2023      0.003    448.039      0.000       1.197       1.208
+==============================================================================
+Omnibus:                      456.493   Durbin-Watson:                   2.022
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              470.894
+Skew:                           0.265   Prob(JB):                    5.58e-103
+Kurtosis:                       2.920   Cond. No.                         446.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
