@@ -2,6 +2,8 @@
 
 Estudio del mercado inmobiliario de Moscú (2020–2026): exploración de los datos, relaciones con el precio de venta y **modelado OLS** del mercado secundario, con experimentos registrados en **MLflow**.
 
+**Integrantes:** Tomás Wajnerman y Felipe Sarco.
+
 **Dataset:** [Moscow Real Estate: Sales and Rentals (2020–2026)](https://www.kaggle.com/datasets/sergionefedov/moscow-real-estate-sales-and-rentals-20202026) (Kaggle). Los CSV deben estar en `MOSCOW-DATASET/`:
 
 | Archivo | Contenido |
@@ -77,56 +79,3 @@ Ejemplo de instalación:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scipy statsmodels scikit-learn mlflow jupyter
-```
-
-### Pasos
-
-1. **Clonar el repositorio** y situarse en la **raíz del proyecto** (donde están `PARCIAL-1.ipynb`, `mlflow.db` y `mlruns/`). Las rutas del notebook asumen ese directorio como working directory.
-2. **Descargar el dataset** de Kaggle y colocar los CSV en `MOSCOW-DATASET/`.
-3. **Abrir el notebook** (`jupyter notebook PARCIAL-1.ipynb`, JupyterLab o VS Code/Cursor).
-4. **Ejecutar la primera celda de imports** (incluye MLflow y el routeo de `mlflow.db`) antes de registrar nuevos experimentos.
-5. Ejecutar el resto **en orden** o usar *Run All* si el entorno y los datos ya están listos.
-
-> Si movés el repo a otra carpeta o clonás en otra máquina, volvé a ejecutar la celda de routeo para alinear las URIs de la base con `./mlruns`.
-
----
-
-## MLflow: backend, artefactos e interfaz
-
-El proyecto usa un **backend híbrido**:
-
-| Componente | Ubicación | Contenido |
-| --- | --- | --- |
-| Metadatos | `mlflow.db` (SQLite) | Experimentos, runs, parámetros, métricas, tags |
-| Artefactos | `mlruns/` | PNG, `summary.txt`, CSV de CV, etc. |
-
-El notebook configura:
-
-```text
-tracking URI:  sqlite:///mlflow.db
-experimento:   SECONDARY-MARKET-MOSCOW
-artefactos:    mlruns/  (relativo a la raíz del repo)
-```
-
-### Ver runs y artefactos en la UI
-
-Desde la **raíz del repositorio** (misma carpeta que `mlflow.db`):
-
-```bash
-mlflow ui --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns
-```
-
-Abrir en el navegador la URL que muestra la terminal (por defecto `http://127.0.0.1:5000`).
-
-1. Elegir el experimento **SECONDARY-MARKET-MOSCOW**.
-2. Abrir un run → pestaña **Artifacts** para ver gráficos y archivos de texto.
-
-En **Windows**, si la UI no encuentra artefactos:
-
-- Confirmar que el comando se ejecutó con el directorio de trabajo en la raíz del repo.
-- Re-ejecutar en el notebook la celda que **normaliza rutas en `mlflow.db`** hacia `mlruns`.
-- Verificar que exista la subcarpeta del run bajo `mlruns/` (columnas `existe_ruta_guardada` / `esta_en_mi_mlruns` en la salida de esa celda).
-
-### Consultar la base sin la UI (opcional)
-
-Podés inspeccionar metadatos con cualquier cliente SQLite apuntando a `mlflow.db`, o reutilizar las consultas del notebook a las tablas `experiments` y `runs`. Los binarios (imágenes) siguen estando en `mlruns/`, no dentro del `.db`.
