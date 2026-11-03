@@ -75,7 +75,68 @@ El notebook está organizado en bloques consecutivos. A continuación, qué se h
 - Python 3.10+ recomendado.
 - Paquetes: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scipy`, `statsmodels`, `scikit-learn`, `mlflow`.
 
-Ejemplo de instalación:
-
 ```bash
 pip install pandas numpy matplotlib seaborn scipy statsmodels scikit-learn mlflow jupyter
+```
+
+### Pasos
+
+1. **Clonar el repositorio** y situarse en la **raíz del proyecto** (donde están `PARCIAL-1.ipynb`, `mlflow.db` y `mlruns/`).
+2. **Descargar el dataset** de Kaggle y colocar los CSV en `MOSCOW-DATASET/`.
+3. **Abrir el notebook** (JupyterLab, Jupyter Notebook o VS Code/Cursor).
+4. **Ejecutar la primera celda de imports** (MLflow + routeo de `mlflow.db`) antes de registrar nuevos experimentos.
+5. Ejecutar el resto **en orden** o *Run All*.
+
+```bash
+cd /ruta/al/repo
+jupyter lab
+```
+
+> Si movés el repo a otra carpeta o clonás en otra máquina, volvé a ejecutar la celda de routeo para alinear las URIs con `./mlruns`.
+
+---
+
+## MLflow: backend, artefactos e interfaz
+
+| Componente | Ubicación | Contenido |
+| --- | --- | --- |
+| Metadatos | `mlflow.db` (SQLite) | Experimentos, runs, parámetros, métricas, tags |
+| Artefactos | `mlruns/` | PNG, `summary.txt`, CSV de CV, etc. |
+
+```text
+tracking URI:  sqlite:///mlflow.db
+experimento:   SECONDARY-MARKET-MOSCOW
+artefactos:    mlruns/
+```
+
+### Comandos para levantar el servicio (MLflow UI)
+
+No hace falta ejecutar el notebook solo para **revisar** runs: basta clonar el repo y levantar la UI desde la **raíz** (misma carpeta que `mlflow.db`).
+
+```bash
+cd /ruta/al/repo
+pip install mlflow
+mlflow ui --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns
+```
+
+Abrir `http://127.0.0.1:5000` → experimento **SECONDARY-MARKET-MOSCOW** → run → **Artifacts**. Detener con `Ctrl+C`.
+
+Puerto alternativo:
+
+```bash
+mlflow ui --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns --host 127.0.0.1 --port 5001
+```
+
+**Windows (PowerShell):**
+
+```powershell
+cd "C:\Users\...\parcial-introduccion-datos"
+pip install mlflow
+mlflow ui --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns
+```
+
+Si la UI no encuentra artefactos en Windows: ejecutar el comando desde la raíz del repo, re-ejecutar la celda de routeo del notebook y comprobar que exista la carpeta del run en `mlruns/`.
+
+### Consultar la base sin la UI (opcional)
+
+Metadatos en `mlflow.db` (SQLite, tablas `experiments` y `runs`). Imágenes y archivos en `mlruns/`.
