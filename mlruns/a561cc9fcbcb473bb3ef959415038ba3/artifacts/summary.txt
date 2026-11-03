@@ -1,0 +1,41 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          log_price_rub   R-squared:                       0.950
+Model:                            OLS   Adj. R-squared:                  0.950
+Method:                 Least Squares   F-statistic:                 4.429e+04
+Date:                Sat, 17 Oct 2026   Prob (F-statistic):               0.00
+Time:                        21:27:57   Log-Likelihood:                 24365.
+No. Observations:               34741   AIC:                        -4.870e+04
+Df Residuals:                   34725   BIC:                        -4.856e+04
+Df Model:                          15                                         
+Covariance Type:            nonrobust                                         
+==============================================================================================
+                                 coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------------
+const                         -0.5926      0.049    -12.100      0.000      -0.689      -0.497
+ceiling_height                 0.0470      0.003     13.427      0.000       0.040       0.054
+metro_distance_min            -0.0011   2.98e-05    -36.238      0.000      -0.001      -0.001
+to_center_km                  -0.0005      0.000     -3.124      0.002      -0.001      -0.000
+mortgage_rate_at_listing      -0.0011      0.000     -8.515      0.000      -0.001      -0.001
+log_total_area                 0.9927      0.003    394.019      0.000       0.988       0.998
+log_district_price_per_sqm     1.0046      0.004    271.427      0.000       0.997       1.012
+metro_distance_type_walk       0.2076      0.002    107.318      0.000       0.204       0.211
+building_type_khrushchev      -0.2087      0.002    -92.447      0.000      -0.213      -0.204
+building_type_modern_panel    -0.0469      0.002    -22.258      0.000      -0.051      -0.043
+building_type_monolith         0.0467      0.002     22.158      0.000       0.043       0.051
+building_type_panel           -0.1326      0.002    -63.317      0.000      -0.137      -0.128
+building_type_stalin           0.1304      0.003     39.024      0.000       0.124       0.137
+renovation_designer            0.3066      0.002    132.553      0.000       0.302       0.311
+renovation_euro                0.1457      0.002     93.706      0.000       0.143       0.149
+renovation_no_renovation      -0.1118      0.002    -63.624      0.000      -0.115      -0.108
+==============================================================================
+Omnibus:                       79.484   Durbin-Watson:                   2.013
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              100.846
+Skew:                          -0.001   Prob(JB):                     1.26e-22
+Kurtosis:                       3.264   Cond. No.                     6.67e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 6.67e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
