@@ -1,0 +1,49 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          log_price_rub   R-squared:                       0.897
+Model:                            OLS   Adj. R-squared:                  0.897
+Method:                 Least Squares   F-statistic:                 1.488e+04
+Date:                Mon, 19 Oct 2026   Prob (F-statistic):               0.00
+Time:                        18:06:02   Log-Likelihood:                 7990.2
+No. Observations:               39457   AIC:                        -1.593e+04
+Df Residuals:                   39433   BIC:                        -1.573e+04
+Df Model:                          23                                         
+Covariance Type:            nonrobust                                         
+==============================================================================================
+                                 coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------------
+const                         15.7952      0.016    968.134      0.000      15.763      15.827
+total_area                     0.0147   5.75e-05    256.121      0.000       0.015       0.015
+ceiling_height                 0.0443      0.005      8.204      0.000       0.034       0.055
+metro_distance_min            -0.0040   3.89e-05   -103.025      0.000      -0.004      -0.004
+mortgage_rate_at_listing       0.0169      0.000     96.503      0.000       0.017       0.017
+metro_distance_type_walk       0.1743      0.003     60.862      0.000       0.169       0.180
+building_type_khrushchev      -0.2103      0.003    -60.353      0.000      -0.217      -0.204
+building_type_modern_panel    -0.0482      0.003    -14.789      0.000      -0.055      -0.042
+building_type_monolith         0.0477      0.003     14.671      0.000       0.041       0.054
+building_type_panel           -0.1327      0.003    -40.893      0.000      -0.139      -0.126
+building_type_stalin           0.1403      0.005     27.403      0.000       0.130       0.150
+renovation_designer            0.3124      0.004     88.606      0.000       0.305       0.319
+renovation_euro                0.1482      0.002     61.615      0.000       0.143       0.153
+renovation_no_renovation      -0.1106      0.003    -40.616      0.000      -0.116      -0.105
+okrug_NAO                     -1.1349      0.006   -205.343      0.000      -1.146      -1.124
+okrug_SAO                     -0.7441      0.005   -160.160      0.000      -0.753      -0.735
+okrug_SVAO                    -0.8173      0.005   -176.826      0.000      -0.826      -0.808
+okrug_SZAO                    -0.5997      0.005   -113.711      0.000      -0.610      -0.589
+okrug_TAO                     -1.2366      0.008   -149.010      0.000      -1.253      -1.220
+okrug_VAO                     -0.8699      0.005   -188.807      0.000      -0.879      -0.861
+okrug_YuAO                    -0.8694      0.005   -188.428      0.000      -0.878      -0.860
+okrug_YuZAO                   -0.5739      0.005   -118.724      0.000      -0.583      -0.564
+okrug_ZAO                     -0.5201      0.005   -105.826      0.000      -0.530      -0.511
+okrug_ZelAO                   -1.0201      0.013    -77.751      0.000      -1.046      -0.994
+==============================================================================
+Omnibus:                        4.690   Durbin-Watson:                   2.000
+Prob(Omnibus):                  0.096   Jarque-Bera (JB):                4.527
+Skew:                           0.004   Prob(JB):                        0.104
+Kurtosis:                       2.948   Cond. No.                     1.72e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.72e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
